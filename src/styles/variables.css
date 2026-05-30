@@ -1,0 +1,14 @@
+:root {
+  --color-mustard: #c9932f;
+  --color-chocolate: #3b2418;
+  --color-chocolate-soft: #5a3827;
+  --color-beige: #f8f1e7;
+  --color-cream: #fffaf3;
+  --color-gold-light: #e6bf72;
+  --color-muted: #7a6254;
+
+  --shadow-soft: 0 18px 45px rgba(59, 36, 24, 0.12);
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+}

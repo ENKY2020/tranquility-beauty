@@ -1,0 +1,74 @@
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  background:
+    radial-gradient(circle at top left, rgba(217, 164, 65, 0.18), transparent 35%),
+    #fff8ee;
+}
+
+.auth-card {
+  width: min(520px, 100%);
+  background: rgba(255, 250, 244, 0.92);
+  border: 1px solid rgba(59, 31, 20, 0.1);
+  border-radius: 34px;
+  padding: 3rem;
+  text-align: center;
+  box-shadow: 0 28px 70px rgba(60, 30, 10, 0.12);
+}
+
+.auth-logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #3b1f14;
+  color: #d9a441;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1.5rem;
+  font-family: Georgia, serif;
+  font-weight: 900;
+}
+
+.auth-card h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: #3b1f14;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.auth-card p {
+  color: #7b6254;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.google-login-btn {
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  padding: 1rem 1.3rem;
+  background: #3b1f14;
+  color: #fff8ee;
+  font-weight: 900;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+}
+
+.google-login-btn:hover {
+  background: #d9a441;
+  color: #3b1f14;
+}
+
+.auth-card small,
+.auth-loading {
+  display: block;
+  margin-top: 1.3rem;
+  color: #8a7568;
+  font-weight: 700;
+}

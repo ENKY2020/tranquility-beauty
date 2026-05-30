@@ -1,0 +1,383 @@
+.navbar-wrapper {
+  width: 100%;
+  background: #fff8ee;
+  border-bottom: 1px solid rgba(92, 50, 30, 0.12);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.topbar {
+  min-height: 34px;
+  background: #3b1f14;
+  color: #f8e3b5;
+  font-size: 0.82rem;
+  padding: 0 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.topbar a {
+  color: #f8e3b5;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.navbar {
+  min-height: 92px;
+  display: grid;
+  grid-template-columns: 250px minmax(320px, 1fr) auto;
+  align-items: center;
+  gap: 1.4rem;
+  background: #fff8ee;
+}
+
+.navbar .searchbar {
+  width: 100%;
+  max-width: 520px;
+  justify-self: center;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  white-space: nowrap;
+}
+
+.navbar-actions > a:not(.nav-whatsapp-btn):not(.nav-login-btn) {
+  font-size: 0.9rem;
+}
+
+.nav-account-btn {
+  max-width: 180px;
+}
+
+.nav-account-btn strong {
+  max-width: 105px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  text-decoration: none;
+  color: #3b1f14;
+  white-space: nowrap;
+}
+
+.logo-mark {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #3b1f14;
+  color: #d9a441;
+  display: grid;
+  place-items: center;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.logo-text h2 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 1.9rem;
+  line-height: 1;
+  color: #3b1f14;
+}
+
+.logo-text span {
+  letter-spacing: 0.32em;
+  font-size: 0.72rem;
+  color: #c8922d;
+  font-weight: 800;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
+.navbar-actions a {
+  color: #3b1f14;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.navbar-actions a:hover {
+  color: #c8922d;
+}
+
+.nav-login-btn,
+.nav-whatsapp-btn {
+  border-radius: 999px;
+  padding: 0.9rem 1.25rem;
+  font-weight: 900 !important;
+}
+
+.nav-login-btn {
+  background: #fff4e4;
+  border: 1px solid rgba(74, 38, 21, 0.12);
+}
+
+.nav-whatsapp-btn {
+  background: #3b1f14;
+  color: #fff8ee !important;
+  box-shadow: 0 10px 24px rgba(59, 31, 20, 0.16);
+}
+
+.nav-whatsapp-btn:hover,
+.nav-login-btn:hover {
+  background: #c8922d;
+  color: #3b1f14 !important;
+}
+
+.nav-account-wrap {
+  position: relative;
+}
+
+.nav-account-btn {
+  border: 1px solid rgba(74, 38, 21, 0.12);
+  background: #fff4e4;
+  color: #3b1f14;
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem 0.45rem 0.45rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  cursor: pointer;
+}
+
+.nav-account-btn img,
+.nav-account-btn > span,
+.account-user img,
+.account-user > span {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-account-btn > span,
+.account-user > span {
+  background: #3b1f14;
+  color: #d9a441;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+}
+
+.nav-account-btn div {
+  display: grid;
+  text-align: left;
+  line-height: 1.1;
+}
+
+.nav-account-btn strong {
+  font-size: 0.82rem;
+}
+
+.nav-account-btn small {
+  color: #9a6a22;
+  font-weight: 900;
+  font-size: 0.68rem;
+}
+
+.account-dropdown {
+  position: absolute;
+  top: calc(100% + 0.85rem);
+  right: 0;
+  width: 310px;
+  background: #fffaf4;
+  border: 1px solid rgba(59, 31, 20, 0.1);
+  border-radius: 26px;
+  padding: 1rem;
+  box-shadow: 0 24px 60px rgba(60, 30, 10, 0.18);
+  z-index: 1200;
+}
+
+.account-user {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  padding-bottom: 1rem;
+  margin-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(59, 31, 20, 0.1);
+}
+
+.account-user div {
+  min-width: 0;
+}
+
+.account-user strong,
+.account-user small {
+  display: block;
+}
+
+.account-user small {
+  color: #7b6254;
+  font-size: 0.78rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.account-user em {
+  margin-top: 0.45rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #f5e4c3;
+  color: #8a5a12;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 0.72rem;
+}
+
+.account-dropdown a,
+.account-dropdown button {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #3b1f14;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.85rem;
+  border-radius: 16px;
+  text-decoration: none;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.account-dropdown a:hover,
+.account-dropdown button:hover {
+  background: #fff0d6;
+}
+
+.bottom-nav {
+  background: linear-gradient(90deg, #c9922f, #e0ae4f, #c9922f);
+  border-top: 1px solid rgba(59, 31, 20, 0.08);
+  border-bottom: 1px solid rgba(59, 31, 20, 0.12);
+}
+
+.bottom-nav-links {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  overflow-x: auto;
+}
+
+.bottom-nav-links a {
+  color: #3b1f14;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 800;
+  padding: 0.9rem 1.35rem;
+  transition: 0.25s ease;
+  white-space: nowrap;
+}
+
+.bottom-nav-links a:hover,
+.bottom-nav-links a.active {
+  background: #3b1f14;
+  color: #fff8ee;
+}
+
+@media (max-width: 1250px) {
+  .navbar {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .navbar-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    padding: 0.55rem 1rem;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: center;
+  }
+
+  .navbar {
+    padding: 1rem;
+  }
+
+  .logo-text h2 {
+    font-size: 1.45rem;
+  }
+
+  .logo-mark {
+    width: 46px;
+    height: 46px;
+  }
+
+  .navbar-actions {
+    gap: 0.65rem;
+  }
+
+  .navbar-actions > a:not(.nav-login-btn):not(.nav-whatsapp-btn) {
+    display: none;
+  }
+
+  .nav-account-btn div {
+    display: none;
+  }
+
+  .account-dropdown {
+    right: -4rem;
+    width: min(310px, 92vw);
+  }
+
+  .bottom-nav-links {
+    justify-content: flex-start;
+  }
+
+  .bottom-nav-links a {
+    padding: 0.85rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+.logo-image {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 12px 28px rgba(59, 31, 20, 0.18);
+  border: 2px solid rgba(217, 164, 65, 0.45);
+}
+
+@media (max-width: 760px) {
+  .logo-image {
+    width: 48px;
+    height: 48px;
+  }
+}
