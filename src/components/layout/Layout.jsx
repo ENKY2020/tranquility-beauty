@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import FloatingWhatsApp from "../common/FloatingWhatsApp";
+import FloatingWhatsapp from "../common/FloatingWhatsapp";
 
 function Layout({ children }) {
   return (
