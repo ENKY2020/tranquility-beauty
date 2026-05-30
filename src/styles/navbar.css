@@ -381,3 +381,42 @@
     height: 48px;
   }
 }
+/* MOBILE ACCOUNT DROPDOWN FIX */
+@media (max-width: 768px) {
+  .nav-account-wrap {
+    position: static;
+  }
+
+  .account-dropdown {
+    position: fixed;
+    top: 178px;
+    left: 14px;
+    right: 14px;
+    width: auto;
+    max-width: none;
+    z-index: 99999;
+    border-radius: 28px;
+    padding: 1rem;
+    box-shadow: 0 28px 80px rgba(59, 31, 20, 0.32);
+  }
+
+  .account-dropdown a,
+  .account-dropdown button {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 1rem;
+    border-radius: 18px;
+    font-size: 1rem;
+  }
+
+  .account-user {
+    padding-bottom: 1rem;
+    margin-bottom: 0.6rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .account-dropdown {
+    top: 260px;
+  }
+}
