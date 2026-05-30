@@ -9,7 +9,7 @@ function Layout({ children }) {
 
       {children}
 
-      <FloatingWhatsApp />
+      <FloatingWhatsapp />
 
       <Footer />
     </div>

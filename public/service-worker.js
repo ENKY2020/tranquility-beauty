@@ -1,4 +1,4 @@
-const CACHE_NAME = "tranquility-beauty-v2";
+const CACHE_NAME = "tranquility-beauty-v3";
 
 const STATIC_ASSETS = [
   "/",
@@ -6,7 +6,7 @@ const STATIC_ASSETS = [
   "/manifest.json",
   "/favicon.png",
   "/icons/icon-192.png",
-  "/icons/icon-512.png"
+  "/icons/icon-512.png",
 ];
 
 self.addEventListener("install", (event) => {
@@ -34,31 +34,35 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
 
-  const request = event.request;
+  const requestUrl = new URL(event.request.url);
+
+  if (!["http:", "https:"].includes(requestUrl.protocol)) {
+    return;
+  }
 
   event.respondWith(
-    fetch(request)
+    fetch(event.request)
       .then((response) => {
         const copy = response.clone();
 
         caches.open(CACHE_NAME).then((cache) => {
-          cache.put(request, copy);
+          cache.put(event.request, copy);
         });
 
         return response;
       })
       .catch(async () => {
-        const cachedResponse = await caches.match(request);
+        const cachedResponse = await caches.match(event.request);
 
         if (cachedResponse) return cachedResponse;
 
-        if (request.mode === "navigate") {
+        if (event.request.mode === "navigate") {
           return caches.match("/");
         }
 
         return new Response("Offline", {
           status: 503,
-          statusText: "Offline"
+          statusText: "Offline",
         });
       })
   );
